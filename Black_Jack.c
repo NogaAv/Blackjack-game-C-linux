@@ -62,14 +62,6 @@ typedef struct sum_args {
 }sum_args_t;
 
 
-/*[Note for tester: I implemented a generelized void* SSL, so no need of this card struct:]
-
-typedef struct Card Card_t;
-struct Card {
-	uint8_t _suitRank;
-	Card_t* _next;
-};*/
-
 //STATIC PROTOTYPES - to be used internaly only by this .cpp file
 //-----------------
 //initialization functions:
@@ -400,7 +392,7 @@ static void clearAll(Player_t* player, Player_t *dealer, List *deck) {
 	clear_list(deck);
 }
 
-//Adds all the cards in the player’s and dealer’s hand to the top of the deck. 
+//Adds all the cards in the playerÂ’s and dealerÂ’s hand to the top of the deck. 
 //If the player's cash is less than 10, the game is over.
 //returns true- continue to play, or false- stop game.
 static bool reset_cards(Player_t *dealer, Player_t *player, List* deck) {
