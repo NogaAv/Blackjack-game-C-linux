@@ -16,12 +16,6 @@
 #define SUCCESS 0
 
 
-/*
-Functions implementations :
-----------------------------*/
-//Prototypes:
-//Note to tester: In some failure checks I did not use this assert function which results in exit in case of fail, and instead 
-//                printed to stderr and returned Null, in order to give the user the option to handle the error himself and to recover.
 void assert_condition(bool isValid, const char* errorMsg);
 
 
