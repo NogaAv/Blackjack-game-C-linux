@@ -1,0 +1,54 @@
+Author: Noga Avraham.
+
+
+Black-Jack Phases: 
+------------------------
+
+1. Game Initialization phase 
+
+ 
+2. Betting phase 
+
+ 
+3. Initial Deal phase:  
+   draw 2 cards to dealer hand, and 2 cards to player hand. Show each player cards, except the second card of the dealer which is hidden 
+
+ 
+4.Black Jack check phase: 
+  Calculate the hand value of the player : 
+
+                1)  == 21?  -> print “Black Jack!” -> add 1.5 the bet to the cash and reset the bet to 0. -> move to the Reset Cards phase. 
+
+                2) else: ( >21 or < 21) -> move to "Hit or Stand Phase".
+                                                    ------------------- 
+
+5. Hit or Stand phase: 
+   input the user for either “hit” or “stand”: 
+
+                 1) Stand?  -> move to the "dealer draw phase" 
+                                           -----------------
+                 2) Hit?   -> draw a card into the player’s hand. -> calculate the value of the player’s hand.  
+
+                       2.a) >21?  -> the player loses the bet, print “bust” and move to "lose bet phase".  
+                                                                                        -----------------
+                       2.b) < 21?  -> repeat "Hit or Stand phase" (start this phase over) 
+                                              ------------------
+
+6. Dealer draw phase: 
+   Calculate the value of the hand of the dealer: 
+
+ 	1) > player’s hand value?  -> player loses. Print “you lose” -> move to the "lose bet phase". 
+                                                                                     --------------- 
+        2) else: keep drawing cards until one of the following occurs:  
+                 Dealer’s hand value > player’s hand value, OR, dealer’s hand value >= 17.  
+
+             2.a) dealer’s hand value > 21?  -> print “dealer bust” ->  Add the bet twice to the cash-> reset the bet to 0 -> move to the Reset Cards phase.  
+                                                                                                                                          -----------------
+             2.b) dealer’s hand <= 21 ? 
+                  2.b.1) dealer’s hand value == player’s? -> print “tie”-> move to the "Reset Cards phase". (The bet doesn’t reset to 0).  
+                                                                                        -----------------
+                  2.b.2) dealer’s hand value > player’s?  -> print “dealer wins”, set bet to 0 ->move to the Reset Cards phase. 
+
+ 
+
+ 
